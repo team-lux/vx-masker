@@ -32,7 +32,7 @@ class Exploit:
         """ send masked message """
         return requests.post(f'https://discordapp.com/api/v6/channels/{self.channel_id}/messages', headers=self.headers, json={'content': self._generate_message(self.message, self.hidden_message)})
 
-    
+   ## Noob Friendly CLI Tweak by vx#1234 
 def main():
     print(f"""{c}
     
@@ -48,8 +48,8 @@ def main():
 {col.LIGHTYELLOW_EX}:::     ::   ::   :::  :::: ::    ::  :::   :: ::::  ::   :::  
 {col.LIGHTYELLOW_EX} :      :     :   : :  :: : :     :   :::  : :: ::    :   : :  
 {col.LIGHTYELLOW_EX}  
-{col.LIGHTYELLOW_EX}                    Masker by Team Lux
-{col.LIGHTYELLOW_EX} Utilizes a exploit to hide links & text in discord messages
+{col.LIGHTYELLOW_EX}               Discord Message Masker by VX
+{col.LIGHTYELLOW_EX}        use your browser to get the channel id for dms
 {col.LIGHTYELLOW_EX}-------------------------------------------------------------
 
 
@@ -63,6 +63,7 @@ def main():
     exploit = Exploit(token, channel_id, message, hidden_message)
 
     exploit.execute()
+main()
 
 
 if __name__ == '__main__':
